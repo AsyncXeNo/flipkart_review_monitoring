@@ -108,8 +108,8 @@ def send_output_mail():
     send_email(sender_email, 
                target_email_list, 
                f'{formatted_date} - Flipkart Review Sheet', 
-               'This email has been automatically generated!\n\nPlease find the Flipkart Review Sheet and Script Logs attached.', 
-               ['data/output.xlsx', 'logs/script.log'])
+               'This is an automated email.\n\nPlease find the Flipkart Review Sheet attached.', 
+               ['data/output.xlsx'])
 
 
 def send_error_mail(error):
