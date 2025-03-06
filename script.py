@@ -23,7 +23,7 @@ if __name__ == '__main__':
 
     logger.info('Starting script')
 
-    send_email('dev.kartikaggarwal117@gmail.com', ['dev.kartikaggarwal117@gmail.com'], 'Flipkart Reviewmon Execute', 'Script has started execution!', [])
+    send_email('Notification System <dev@kartikcodes.in>', ['dev.kartikaggarwal117@gmail.com'], 'Flipkart Reviewmon Execute!', 'Flipkart Reviewmon Script has started execution!', [])
 
     with open('data/latest.json', 'r') as f:
         latest_review_data = json.load(f)
@@ -88,11 +88,11 @@ if __name__ == '__main__':
         if not latest_product_info:
             latest_product_info = {
                 'overall': 'NA',
-                5: 'NA',
-                4: 'NA',
-                3: 'NA',
-                2: 'NA',
-                1: 'NA'
+                "5": 'NA',
+                "4": 'NA',
+                "3": 'NA',
+                "2": 'NA',
+                "1": 'NA'
             }
 
         latest_product_info = copy.deepcopy(latest_product_info)
@@ -103,15 +103,15 @@ if __name__ == '__main__':
             'URL': URL,
             f'Overall rating ({latest_date})': latest_product_info['overall'],
             f'Overall rating ({today_date})': scraped_info['overall'],
-            f'5 star ratings ({latest_date})': latest_product_info[5],
+            f'5 star ratings ({latest_date})': latest_product_info["5"],
             f'5 star ratings ({today_date})': scraped_info[5],
-            f'4 star ratings ({latest_date})': latest_product_info[4],
+            f'4 star ratings ({latest_date})': latest_product_info["4"],
             f'4 star ratings ({today_date})': scraped_info[4],
-            f'3 star ratings ({latest_date})': latest_product_info[3],
+            f'3 star ratings ({latest_date})': latest_product_info["3"],
             f'3 star ratings ({today_date})': scraped_info[3],
-            f'2 star ratings ({latest_date})': latest_product_info[2],
+            f'2 star ratings ({latest_date})': latest_product_info["2"],
             f'2 star ratings ({today_date})': scraped_info[2],
-            f'1 star ratings ({latest_date})': latest_product_info[1],
+            f'1 star ratings ({latest_date})': latest_product_info["1"],
             f'1 star ratings ({today_date})': scraped_info[1],
         }
 
