@@ -25,6 +25,7 @@ def _get_chrome_options():
 
     chrome_options.add_argument(f"--user-data-dir={os.path.join(os.getcwd(), 'user_data_dir')}")
     chrome_options.add_argument("--profile-directory=Default")
+    chrome_options.add_argument("--headless=new")
 
     return chrome_options
 

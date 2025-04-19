@@ -137,13 +137,13 @@ if __name__ == '__main__':
 
     logger.info('Emailing data...')
 
-    send_output_mail()
+    # send_output_mail()
 
     logger.info('Updating latest info...')
 
-    latest_review_data['date'] = today_date
+    # latest_review_data['date'] = today_date
 
-    with open('data/latest.json', 'w') as f:
-        json.dump(latest_review_data, f, indent=4)
+    # with open('data/latest.json', 'w') as f:
+    #     json.dump(latest_review_data, f, indent=4)
 
     logger.info('Script has run to completion!')
